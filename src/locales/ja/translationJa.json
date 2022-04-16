@@ -1,0 +1,22 @@
+{
+  "langName": "英語",
+  "logo": "Don't Dis My Ability",
+
+  "navLinkHome": "ホーム",
+  "navLinkUpload": "アップロード",
+  "navChangeLang": "言語の変更",
+  "navLinkLogout": "ログアウト",
+
+  "homeTitle": "私たちは誰ですか",
+  "hoemAbout": "特別な障害を持つ人々にソロ旅行を便利にするために,私たちがあなたにもたらすDo n't Dis My Abilityは,さまざまな障害を持つ人々にスムーズで気楽な一人旅体験を保証するためのWebアプリです。 OCRの実装にGoogleVisionAPIを使用して,レストランのメニューから必要な情報を取得し,料理のカロリーを表示するとともに,データをベジタリアンと非ベジタリアンのカテゴリにクラスター化します。」",
+  "homeUpdate": "更新メニュー",
+  "homwWhatElse": "他に何がありますか",
+  "homeDesc": "Do n't Dis My Abilityは,次のことができるWebアプリです:",
+  "homePt1": "コイルを使用してマイクロペイメントを行うことを許可する",
+  "homePt2": "食品を菜食主義者または非菜食主義者として分類する",
+  "homePt3": "メニューをアップロードし,そこから情報を抽出します",
+  "homePt4": "メニューから抽出したテキストを音声に変換",
+  "homePt5": "食材やカロリーなど,食品に関する栄養情報を取得する",
+
+  "resultOCR": "憤慨 カレー HSpecial Subji Latie 300 Hスペシャルパニールラウンラッタ HSpecial DelEHasmukh チェナとカジュキュリー 320 300 300 パニールティカアバブダ 310 Tawe Paneer Chaata * 310 チーズタワマサラ 310 カジュパニールマーラ 310 パニールムーラ 220 パニールバルチ 300 パニールセンマラ 300 パク・ペリア 270 パニールバターマサラ 290 チーズマハンメイ 320"
+}
