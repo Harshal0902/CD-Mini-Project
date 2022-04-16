@@ -1,27 +1,15 @@
-import React, { useState, Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import "../i18n"
-import i18n from '../i18n'
-import { useTranslation } from 'react-i18next'
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
-const changeLang = (ln) => {
-    return () => {
-        i18n.changeLanguage(ln);
-    };
-};
-
 export default function Navbar() {
-
-    const { t } = useTranslation();
 
     const [showNavbar, setShowNavbar] = React.useState(false);
 
     return (
         <div >
             <nav className="flex items-center py-2 flex-wrap px-4 text-fontColor tracking-wide">
-                <Link to="/"><span className="p-2 mr-4 inline-flex items-center text-4xl cursor-pointer font-base text-white">{t('logo')}
+                <Link to="/"><span className="p-2 mr-4 inline-flex items-center text-4xl cursor-pointer font-base text-white">APP NAME
                 </span></Link>
                 <button className="lg:hidden right-0 absolute md:px-8 px-6 mr-1 mb-1 ease-linear transition-all duration-150" type="button" onClick={() => setShowNavbar(true)} aria-hidden="false" aria-label="button">
                     <HiOutlineMenuAlt3 className="h-7 w-7" aria-hidden="false" />
@@ -35,7 +23,7 @@ export default function Navbar() {
                                     <div className="flex items-start justify-between p-5 border-solid rounded-t">
                                         <Link activeClass="active" to="about" spy={true} smooth={true} offset={-150} duration={250}>
                                             <div className="text-2xl font-base tracking-wide cursor-pointer">
-                                                {t('logo')}
+                                                APP NAME
                                             </div>
                                         </Link>
 
@@ -53,11 +41,11 @@ export default function Navbar() {
                                     >
 
                                         <Link to="/">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">{t('navLinkHome')}</span>
+                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Home</span>
                                         </Link>
 
-                                        <Link to="/upload">
-                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">{t('navLinkUpload')}</span>
+                                        <Link to="/compiler">
+                                            <span className="lg:inline-flex px-3 mx-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Compiler</span>
                                         </Link>
 
                                     </div>
@@ -73,7 +61,11 @@ export default function Navbar() {
                     <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full text-xl lg:items-center items-start flex flex-col lg:h-auto space-x-2 mr-12" >
 
                         <Link to="/">
-                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">{t('navLinkHome')}</span>
+                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Home</span>
+                        </Link>
+
+                        <Link to="/compiler">
+                            <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover hover:bg-secondary cursor-pointer text-white">Compiler</span>
                         </Link>
 
                     </div>
