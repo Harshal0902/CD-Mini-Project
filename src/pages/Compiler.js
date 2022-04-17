@@ -1,33 +1,33 @@
 import React, { Component } from "react";
-import "./Compiler.css";
+
 export default class Compiler extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: localStorage.getItem('input')||``,
+      input: localStorage.getItem('input') || ``,
       output: ``,
-      language_id:localStorage.getItem('language_Id')|| 2,
+      language_id: localStorage.getItem('language_Id') || 2,
       user_input: ``,
     };
   }
-  input = (event) => { 
+  input = (event) => {
     event.preventDefault();
     this.setState({ input: event.target.value });
-    localStorage.setItem('input', event.target.value) 
+    localStorage.setItem('input', event.target.value)
   };
-  
+
   userInput = (event) => {
     event.preventDefault();
     this.setState({ user_input: event.target.value });
   };
-  
-  language = (event) => {  
+
+  language = (event) => {
     event.preventDefault();
     this.setState({ language_id: event.target.value });
-    localStorage.setItem('language_Id',event.target.value)
-   
+    localStorage.setItem('language_Id', event.target.value)
+
   };
-  
+
   submit = async (e) => {
     e.preventDefault();
     let outputText = document.getElementById("output");
@@ -39,7 +39,7 @@ export default class Compiler extends Component {
         method: "POST",
         headers: {
           "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-          "x-rapidapi-key": "", // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
+          "x-rapidapi-key": "0319223c71mshc51b756933941a7p1a4c4ejsn710364b40f0b",
           "content-type": "application/json",
           accept: "application/json",
         },
@@ -50,7 +50,7 @@ export default class Compiler extends Component {
         }),
       }
     );
-    
+
     outputText.innerHTML += "Submission Created ...\n";
     const jsonResponse = await response.json();
     let jsonGetSolution = {
@@ -70,14 +70,14 @@ export default class Compiler extends Component {
           method: "GET",
           headers: {
             "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-            "x-rapidapi-key": "", // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
+            "x-rapidapi-key": "0319223c71mshc51b756933941a7p1a4c4ejsn710364b40f0b",
             "content-type": "application/json",
           },
         });
         jsonGetSolution = await getSolution.json();
       }
     }
-    
+
     if (jsonGetSolution.stdout) {
       const output = atob(jsonGetSolution.stdout);
       outputText.innerHTML = "";
@@ -92,8 +92,8 @@ export default class Compiler extends Component {
       outputText.innerHTML += `\n Error :${compilation_error}`;
     }
   };
-  
-  render() { 
+
+  render() {
     return (
       <>
         <div className="row container-fluid">
