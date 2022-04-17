@@ -95,62 +95,62 @@ export default class Compiler extends Component {
 
   render() {
     return (
-      <>
-        <div className="row container-fluid">
-          <div className="col-6 ml-4 ">
-            <label htmlFor="solution ">
-              <span className="badge badge-info heading mt-2 ">
-                <i className="fas fa-code fa-fw fa-lg"></i> Code Here
-              </span>
-            </label>
-            <textarea
-              required
-              name="solution"
-              id="source"
-              onChange={this.input}
-              className=" source"
-              value={this.state.input}
-            ></textarea>
-            <button
-              type="submit"
-              className="btn btn-danger ml-2 mr-2 "
-              onClick={this.submit}
-            >
-              <i className="fas fa-cog fa-fw"></i> Run
-            </button>
+      <div className="grid grid-cols-2 my-4 mx-12 gap-3">
 
-            <label htmlFor="tags" className="mr-1">
-              <b className="heading">Language:</b>
-            </label>
-            <select
-              value={this.state.language_id}
-              onChange={this.language}
-              id="tags"
-              className="form-control form-inline mb-2 language"
-            >
-              <option value="54">C++</option>
-              <option value="50">C</option>
-              <option value="62">Java</option>
-              <option value="71">Python</option>
-            </select>
+        <div className="">
+          <div className="bg-secondary text-2xl text-white py-2 px-4 w-44 text-center rounded-lg">
+            Code Here
           </div>
-          <div className="col-5">
-            <div>
-              <span className="badge badge-info heading my-2 ">
-                <i className="fas fa-exclamation fa-fw fa-md"></i> Output
-              </span>
-              <textarea id="output"></textarea>
+
+          <textarea
+            required
+            name="solution"
+            id="source"
+            onChange={this.input}
+            className="source my-4 p-2 w-full bg-gray-200 text-xl rounded-lg h-96"
+            value={this.state.input}
+          ></textarea>
+
+          <button
+            type="submit"
+            className="bg-red-500 text-white p-2 w-56 text-center rounded-lg text-2xl"
+            onClick={this.submit}
+          >Run
+          </button>
+
+          <label htmlFor="tags" className="mr-1">
+            <b className="px-2 text-xl text-white">Language:</b>
+          </label>
+          <select
+            value={this.state.language_id}
+            onChange={this.language}
+            id="tags"
+            className="text-xl p-2 rounded-lg cursor-pointer w-44"
+          >
+            <option value="54">C++</option>
+            <option value="50">C</option>
+            <option value="62">Java</option>
+            <option value="71">Python</option>
+          </select>
+
+          <div className="mt-4">
+            <div className="bg-secondary text-2xl text-white py-2 px-4 w-44 text-center rounded-lg">
+              User Input
             </div>
+            <textarea id="input" className="my-2 p-2 w-full bg-gray-200 text-xl rounded-lg h-44" onChange={this.userInput}></textarea>
           </div>
+
         </div>
-        <div className="mt-2 ml-5">
-          <span className="badge badge-primary heading my-2 ">
-            <i className="fas fa-user fa-fw fa-md"></i> User Input
-          </span>
-          <br />
-          <textarea id="input" onChange={this.userInput}></textarea>
+
+
+        <div className="">
+          <div className="bg-secondary text-2xl text-white py-2 px-4 w-44 text-center rounded-lg">
+            Output
+          </div>
+          <textarea className="my-4 p-2 w-full bg-gray-200 text-xl rounded-lg h-[44rem]" id="output"></textarea>
         </div>
-      </>
+
+      </div>
     );
   }
 }
