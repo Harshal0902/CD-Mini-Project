@@ -2,6 +2,7 @@
 
 - Deployed URL: [online-compiler.netlify.app](https://online-compiler.netlify.app/)
 - PPT: https://docs.google.com/presentation/d/16ciI1TsxUfLHQzoN7WABb-7I1qc1n-zd5jeOVqh6alU/edit?usp=sharing
+- PPT (View only): https://docs.google.com/presentation/d/16ciI1TsxUfLHQzoN7WABb-7I1qc1n-zd5jeOVqh6alU/edit?usp=sharing
 - Docs: https://docs.google.com/document/d/1dHWJd66pZrdxsBV49SDCzNEC3bEGziJsE9uvrKyLWg8/edit?usp=sharing
 
 ![image](https://user-images.githubusercontent.com/64153988/163712486-fa256d8e-397f-4051-abda-647db20138f1.png)
