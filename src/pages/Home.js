@@ -14,7 +14,7 @@ export default function Home() {
                     <p className='text-xl py-4 tracking-wider text-justify'>Online Compiler is an open-source online code execution system. It can be used to build a wide range of applications varying from competitive programming platforms, educational and recruitment platforms, to online code editors, and more.</p>
 
                     <Link to="/compiler">
-                        <button className='bg-secondary py-2 px-8 rounded-md text-xl md:text-2xl'>Open Comipler</button>
+                        <button className='bg-secondary py-2 px-8 rounded-md text-xl md:text-2xl'>Open Compiler</button> 
                     </Link>
 
                 </div>
